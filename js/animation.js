@@ -49,16 +49,16 @@ function move(context) {
         context.drawImage(Rdoodle, Player.x, Player.y);
     }
 
-    if (mouseX < Player.x - 6) {
+    if (mouseX < Player.x - 10) {
         Player.direction = 0;
-        Player.x = Player.x-2;
+        Player.x = Player.x-10;
     }
 
-    if (mouseX > Player.x + 6) {
+    if (mouseX > Player.x + 10) {
         Player.direction = 1;
-        Player.x = Player.x+ 2;
+        Player.x = Player.x+ 10;
     }
-
+/*
     if (mouseX < Player.x - 100) {
         Player.direction = 0;
         Player.x -= 10;
@@ -67,7 +67,7 @@ function move(context) {
     if (mouseX > Player.x + 100) {
         Player.direction = 1;
         Player.x += 10;
-    }
+    }*/
 
     if (Player.direction == 1) {
         context.drawImage(Rdoodle, Player.x, Player.y);

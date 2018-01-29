@@ -47,18 +47,20 @@ backgroundimg.onload = function (ev) {
 
         if (Player.y > Height) {
             window.cancelAnimationFrame(startanimation);
+            canvas.style.cursor = "default";
             alert("游戏结束!\n你的得分为:"+parseInt(GameData.score));
             location.reload();
         } else {
             requestAnimationFrame(startanimation);
-
         }
 
     }
     var start = document.getElementById("startBTN");
     start.addEventListener("click",function () {
+        canvas.style.cursor = "none";
         window.requestAnimationFrame(startanimation);
         start.style.display = "none";
+
     })
 
 };
